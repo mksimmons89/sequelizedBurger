@@ -1,5 +1,9 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+var db = require("./models");
+
+db.sequelize.sync().then(function() {
+});
 
 var PORT = process.env.PORT || 8000;
 var app = express();
